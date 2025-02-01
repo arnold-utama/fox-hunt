@@ -1,5 +1,4 @@
 html {
-  cursor: url("/assets/cursor_aim-64x64px.png") 32 32, auto;
   overflow: hidden;
   height: 100%;
 }
@@ -30,7 +29,48 @@ body {
 }
 
 #game-area {
+  cursor: url("/assets/cursor_aim-64x64px.png") 32 32, auto;
   flex-grow: 1;
   position: relative;
   width: 100%;
+  user-select: none;
+}
+
+#congratulations-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  width: 30%;
+  padding: 20px;
+  text-align: center;
+  background-color: #005caa;
+  border-radius: 12px;
+  color: #f9a35a;
+}
+
+.close-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #f9a35a;
+  border: thick solid #ffea8b;
+  border-radius: 12px;
+  font-weight: 900;
+  color: #005caa;
+}
+
+.close-btn:hover {
+  background-color: #d9823a;
+  border-color: #e5d176;
+  color: darkred;
 }

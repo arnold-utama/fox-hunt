@@ -16,7 +16,7 @@ function createTarget() {
   let spawnSide = "left";
   if (Math.random() > 0.5) {
     spawnSide = "right";
-  }        
+  }
 
   let transition = "transform 5s ease-in-out";
   if (Math.random() > 0.7) {
@@ -38,18 +38,25 @@ function createTarget() {
   }
 
   target.addEventListener("mousedown", function () {
-    console.log("Target was hit!");
     let currentPosition = window.getComputedStyle(target).transform;
     target.src = "assets/swiper2.png";
     target.style.transform = currentPosition;
-    target.style.transition = "opacity 1s linear";
+    target.style.transition = "opacity 1s ease-in-out";
     target.style.opacity = 0;
     currentScore += 100;
     score.textContent = currentScore;
 
     setTimeout(() => {
       target.remove();
-    }, 500);
+    }, 1000);
+  });
+
+  setTimeout(() => {
+    target.remove();
+  }, 5000);
+
+  target.addEventListener("dragstart", function (event) {
+    event.preventDefault();
   });
 
   gameArea.appendChild(target);
@@ -67,3 +74,15 @@ let spawnTarget = setInterval(() => {
     clearInterval(timerCountdown);
   }
 }, 1000);
+
+function showCongratulations() {
+  document.getElementById("final-score").textContent = currentScore;
+  document.getElementById("congratulations-modal").style.display = "flex";
+}
+
+function closeModal() {
+  // document.getElementById("congratulations-modal").style.display = "none";
+  window.location.href = "index.html";
+}
+
+setTimeout(showCongratulations, 25000);
