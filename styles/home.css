@@ -12,15 +12,14 @@ body {
 }
 
 #startButton {
-  width: 160px;
-  height: 80px;
-  margin-bottom: 10vh;
+  padding: 10px 20px;
+  margin-bottom: 50px;
   background-color: #f9a35a;
-  border: 10px solid #ffea8b;
+  border: thick solid #ffea8b;
   border-radius: 12px;
   color: #005caa;
   font-weight: 900;
-  font-size: medium;
+  font-size: xx-large;
 }
 
 #startButton:hover {
