@@ -1,0 +1,31 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100vh;
+  margin: 0;
+  background-image: url("/assets/start_background.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: black;
+}
+
+#startButton {
+  width: 160px;
+  height: 80px;
+  margin-bottom: 10vh;
+  background-color: #f9a35a;
+  border: 10px solid #ffea8b;
+  border-radius: 12px;
+  color: #005caa;
+  font-weight: 900;
+  font-size: medium;
+}
+
+#startButton:hover {
+  background-color: #d9823a;
+  border-color: #e5d176;
+  color: darkred;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}

@@ -1,0 +1,36 @@
+html {
+  cursor: url("/assets/cursor_aim-64x64px.png") 32 32, auto;
+  overflow: hidden;
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-image: url("/assets/game_background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: black;
+}
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #f9a35a;
+  padding: 0 2em;
+  background-color: rgb(0, 92, 170, 0.5);
+}
+
+.value {
+  color: #ffea8b;
+}
+
+#game-area {
+  flex-grow: 1;
+  position: relative;
+  width: 100%;
+}
