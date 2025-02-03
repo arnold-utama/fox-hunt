@@ -1,7 +1,10 @@
+let totalTime = 20; // set time di sini
+let totalTargets = totalTime * 2; // totalTime * 2 untuk difficulty hard
 let score = document.getElementById("score");
 let timer = document.getElementById("timer");
+timer.textContent = totalTime;
 let currentScore = 0;
-let currentTimer = Number(timer.textContent);
+
 function createTarget() {
   let target = document.createElement("img");
   let gameArea = document.getElementById("game-area");
@@ -16,6 +19,7 @@ function createTarget() {
   let spawnSide = "left";
   if (Math.random() > 0.5) {
     spawnSide = "right";
+    target.src = "assets/swiper1_flipped.png";
   }
 
   let transition = "transform 5s ease-in-out";
@@ -62,18 +66,26 @@ function createTarget() {
   gameArea.appendChild(target);
 }
 
+let timeLeft = totalTime;
 let timerCountdown = setInterval(() => {
-  currentTimer--;
-  timer.textContent = currentTimer;
-}, 1000);
-
-let spawnTarget = setInterval(() => {
-  createTarget();
-  if (currentTimer <= 0) {
-    clearInterval(spawnTarget);
+  timeLeft--;
+  timer.textContent = timeLeft;
+  if (timeLeft === 0) {
     clearInterval(timerCountdown);
   }
 }, 1000);
+
+let targetsSpawned = 0;
+let spawnInterval = totalTime / totalTargets * 1000;
+let spawnTarget = setInterval(() => {
+  createTarget();
+  targetsSpawned++;
+  console.log(targetsSpawned);
+  
+  if (targetsSpawned === totalTargets) {
+    clearInterval(spawnTarget);
+  }
+}, spawnInterval);
 
 function showCongratulations() {
   document.getElementById("final-score").textContent = currentScore;
@@ -85,4 +97,12 @@ function closeModal() {
   window.location.href = "index.html";
 }
 
-setTimeout(showCongratulations, 25000);
+setTimeout(() => {
+  showCongratulations();
+}, totalTime * 1000 + 5000);
+
+// if (targetsKilled === totalTargets) {
+//   showCongratulations();
+// } else if (targetsSpawned === totalTargets) {
+//   showCongratulations();
+// }
