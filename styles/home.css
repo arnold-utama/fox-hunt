@@ -4,7 +4,7 @@ body {
   align-items: flex-end;
   height: 100vh;
   margin: 0;
-  background-image: url("/assets/new_start_background.png");
+  background-image: url("/assets/start_background.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
