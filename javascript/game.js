@@ -1,5 +1,5 @@
-let totalTime = 20; // set waktu per round di sini
-let totalSwiper = Math.round(totalTime * 1.5); // jumlah Swiper yang muncul: totalTime saja untuk difficulty easy, totalTime * 2 untuk difficulty hard
+let totalTime = 2; // set waktu per round di sini
+let totalSwiper = Math.round(totalTime * 1.5); // jumlah Swiper yang muncul
 let totalBoots = Math.round(totalSwiper / 2); // jumlah Boots yang muncul
 let totalGoldSwiper = Math.round(totalSwiper / 5); // jumlah Boots yang muncul
 let swiperPoints = 100; // poin yang didapat ketika menembak Swiper
@@ -147,7 +147,7 @@ function showCongratulations() {
 
 function closeModal() {
   // document.getElementById("congratulations-modal").style.display = "none";
-  window.location.href = "index.html";
+  window.location.href = "home.html";
 }
 
 setTimeout(() => {
