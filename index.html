@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <title>Fox Hunt</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="styles/home.css">
+  </head>
+  <body>
+    <button id="startButton" type="button">START</button>
+
+    <script>
+      document
+        .getElementById("startButton")
+        .addEventListener("click", function () {
+          window.location.href = "game.html";
+        });
+    </script>
+  </body>
 </html>
