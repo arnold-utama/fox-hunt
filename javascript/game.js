@@ -153,9 +153,9 @@ gameArea.addEventListener("mousedown", () => {
 const gun = document.getElementById("gun");
 const offsetX = 200;
 document.addEventListener("mousemove", (event) => {
-    let mouseX = event.clientX;
-    let gunPosition = mouseX + offsetX;
-    gun.style.transform = `translateX(${gunPosition}px)`;
+  let mouseX = event.clientX;
+  let gunPosition = mouseX + offsetX;
+  gun.style.transform = `translateX(${gunPosition}px)`;
 });
 
 function showCongratulations() {
@@ -171,3 +171,20 @@ function closeModal() {
 setTimeout(() => {
   showCongratulations();
 }, totalTime * 1000 + 5000);
+
+function updateHighScores(newScore) {
+  let highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+  highScores.push(newScore);
+  highScores.sort((a, b) => b - a);
+  highScores = highScores.slice(0, 5); // Simpan hanya 5 skor tertinggi
+  localStorage.setItem("highScores", JSON.stringify(highScores));
+}
+
+function closeModal() {
+  updateHighScores(currentScore); // Simpan skor saat menutup modal
+  window.location.href = "highscore.html"; // Arahkan ke halaman high score
+}
+
+function goToHome() {
+  window.location.href = "home.html";
+}
