@@ -9,7 +9,7 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  background-image: url("/assets/game_background.png");
+  background-image: url("https://github.com/arnold-utama/fox-hunt/blob/main/assets/game_background.png?raw=true");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
