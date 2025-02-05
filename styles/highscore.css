@@ -1,45 +1,52 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-  }
-  
-  .highscore-container {
-    text-align: center;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  #highscores-list {
-    margin: 20px 0;
-    font-size: 18px;
-  }
-  
-  #score-input {
-    padding: 10px;
-    font-size: 16px;
-    width: 200px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  #add-score-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-  }
-  
-  #add-score-button:hover {
-    background-color: #45a049;
-  }
+  background-color: #001f3f;
+  color: #f9a35a;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+}
+
+.container {
+  max-width: 400px;
+  margin: 50px auto;
+  background: rgba(0, 92, 170, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  border: 3px solid #ffea8b;
+}
+
+h1 {
+  color: #ffea8b;
+}
+
+#highscore-list {
+  list-style: none;
+  padding: 0;
+  font-size: 1.5em;
+}
+
+#highscore-list li {
+  background: #f9a35a;
+  color: #005caa;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ffea8b;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #005caa;
+}
+
+button:hover {
+  background-color: #e5d176;
+  color: darkred;
+}
