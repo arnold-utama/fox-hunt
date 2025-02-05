@@ -10,5 +10,5 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function goBack() {
-  window.location.href = "home.html";
+  window.location.href = "index.html";
 }
