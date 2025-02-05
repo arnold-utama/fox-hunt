@@ -16,6 +16,7 @@ body {
   background-color: black;
 }
 #header {
+  height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,14 +31,16 @@ body {
 
 #game-area {
   cursor: url("/assets/aim_red-64x64px.png") 32 32, auto;
+  user-select: none;
   flex-grow: 1;
   position: relative;
   width: 100%;
-  user-select: none;
 }
 
 #gun-area {
-  height: 250px;
+  user-select: none;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 #gun {
