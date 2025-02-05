@@ -180,6 +180,10 @@ function createZalvin() {
     setTimeout(() => {
       jumpscare.remove();
     }, 1000);
+
+    jumpscare.addEventListener("dragstart", function (event) {
+      event.preventDefault();
+    });
   });
 
   setTimeout(() => {
