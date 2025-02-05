@@ -28,8 +28,9 @@ function createTarget(targetType) {
       transition = "transform 2s linear";
     }
   } else if (targetType === "goldSwiper") {
-    target.src = "assets/goldswiper1.png";
-    target.alt = "Swiper bonus";
+    target.style.height = "300px";
+    target.src = "assets/zalvin1.png";
+    target.alt = "Zalvin";
     transition = "transform 2s ease-in-out";
   } else if (targetType === "boots") {
     target.src = "assets/boots1.webp";
@@ -43,7 +44,7 @@ function createTarget(targetType) {
     if (targetType === "swiper") {
       target.src = "assets/swiper1_flipped.png";
     } else if (targetType === "goldSwiper") {
-      target.src = "assets/goldswiper1_flipped.png";
+      target.src = "assets/zalvin1_flipped.png";
     } else if (targetType === "boots") {
       target.src = "assets/boots1_flipped.webp";
     }
@@ -73,8 +74,11 @@ function createTarget(targetType) {
       target.src = "assets/swiper2.png";
       currentScore += swiperPoints;
     } else if (targetType === "goldSwiper") {
-      target.src = "assets/goldswiper2.png";
+      target.src = "assets/zalvin2.png";
+      target.style.height = "200vh";
       currentScore += goldSwiperPoints;
+      let zalvinSound = new Audio("/assets/zalvin.mp3");
+      zalvinSound.play();
     } else if (targetType === "boots") {
       target.src = "assets/boots2.png";
       currentScore += bootsPoints;
@@ -144,6 +148,14 @@ let gameArea = document.getElementById("game-area");
 gameArea.addEventListener("mousedown", () => {
   let gunSound = new Audio("/assets/ak47_sound.webm");
   gunSound.play();
+});
+
+const gun = document.getElementById("gun");
+const offsetX = 200;
+document.addEventListener("mousemove", (event) => {
+    let mouseX = event.clientX;
+    let gunPosition = mouseX + offsetX;
+    gun.style.transform = `translateX(${gunPosition}px)`;
 });
 
 function showCongratulations() {

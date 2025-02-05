@@ -36,6 +36,16 @@ body {
   user-select: none;
 }
 
+#gun-area {
+  height: 250px;
+}
+
+#gun {
+  height: 250px;
+  position: fixed;
+  bottom: -1px;
+}
+
 #congratulations-modal {
   display: none;
   position: fixed;
