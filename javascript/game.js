@@ -29,6 +29,7 @@ function createTarget(targetType) {
     }
   } else if (targetType === "goldSwiper") {
     target.style.height = "300px";
+    target.style.top = Math.random() * gameAreaHeight / 2 + "px";
     target.src = "assets/zalvin1.png";
     target.alt = "Zalvin";
     transition = "transform 2s ease-in-out";
@@ -168,6 +169,8 @@ function closeModal() {
   window.location.href = "home.html";
 }
 
+let bgm = document.getElementById("bgm");
 setTimeout(() => {
   showCongratulations();
+  bgm.pause();
 }, totalTime * 1000 + 5000);
