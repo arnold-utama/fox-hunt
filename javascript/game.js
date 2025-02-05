@@ -140,6 +140,12 @@ let spawnBoots = setInterval(() => {
   }
 }, bootsSpawnInterval);
 
+let gameArea = document.getElementById("game-area");
+gameArea.addEventListener("mousedown", () => {
+  let gunSound = new Audio("/assets/ak47_sound.webm");
+  gunSound.play();
+});
+
 function showCongratulations() {
   document.getElementById("final-score").textContent = currentScore;
   document.getElementById("congratulations-modal").style.display = "flex";
