@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   highScores.forEach((entry, index) => {
     const li = document.createElement("li");
-    li.textContent = `${index + 1}. ${entry.name} - ${entry.score}`;
+    li.textContent = `${index + 1}. ${entry.name} — ${entry.score}`;
     highscoreList.appendChild(li);
   });
 });
