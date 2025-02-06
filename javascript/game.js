@@ -345,12 +345,16 @@ nameInput.addEventListener("input", function () {
   submitBtn.disabled = nameInput.value.trim() === "";
 });
 
+let coolInput = document.getElementsByClassName("coolinput")[0];
+let congratulationsMessage = document.getElementById("congratulations-message");
 function showCongratulations() {
   if (
     highScores.length >= 5 &&
     currentScore <= highScores[highScores.length - 1].score
   ) {
     submitBtn.style.display = "none";
+    coolInput.style.display = "none";
+    congratulationsMessage.textContent = "Try Again!";
   }
   document.getElementById("final-score").textContent = currentScore;
   document.getElementById("congratulations-modal").style.display = "flex";

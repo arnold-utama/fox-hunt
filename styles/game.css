@@ -62,6 +62,10 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+#congratulations-modal p {
+  font-size: 18px;
+}
+
 .modal-content {
   width: 30%;
   padding: 20px;
@@ -72,7 +76,8 @@ body {
 }
 
 .modal-btn {
-  margin-top: 20px;
+  /* margin-top: 20px; */
+  margin: 15px 5px;
   padding: 10px 20px;
   border: none;
   background-color: #f9a35a;
@@ -98,31 +103,23 @@ body {
 
 #home-button {
   position: fixed;
-  top: 10px;
+  height: 100px;
   left: 50%;
   transform: translateX(-50%);
-  padding: 10px 20px;
-  background-color: #ffea8b;
-  border: none;
-  border-radius: 8px;
   cursor: pointer;
-  font-weight: bold;
-  color: #005caa;
-  z-index: 1000; /* Agar selalu terlihat di atas elemen lain */
+  filter: brightness(90%);
 }
 
 #home-button:hover {
-  background-color: #e5d176;
-  color: darkred;
+  filter: brightness(110%);
 }
 
 /* From Uiverse.io by kamehame-ha */
 .coolinput {
   display: flex;
   flex-direction: column;
-  width: fit-content;
-  position: static;
-  max-width: 240px;
+  width: 20%;
+  margin: 20px auto;
 }
 
 .coolinput label.text {
