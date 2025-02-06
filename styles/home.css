@@ -4,7 +4,7 @@ body {
   align-items: flex-end;
   height: 100vh;
   margin: 0;
-  background-image: url("../assets/start_background.png");
+  background-image: url("../assets/start_backgroundnew.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -16,7 +16,8 @@ body {
   border: 8px solid #ffae70;
   outline: 4px solid;
   border-radius: 100%;
-  margin: 5px;
+  margin: 10px;
+  margin-bottom: 50px;
 }
 
 .button-base {
