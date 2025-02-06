@@ -274,7 +274,7 @@ let spawnZalvin = setInterval(() => {
 let gun = document.getElementById("gun");
 let gunPosition = 0;
 let offsetX = 180;
-let recoilAngle = 8;
+let recoilAngle = 10;
 document.addEventListener("mousemove", (event) => {
   let mouseX = event.clientX;
   gunPosition = mouseX + offsetX;
