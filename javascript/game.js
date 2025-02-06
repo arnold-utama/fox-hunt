@@ -295,16 +295,6 @@ setTimeout(() => {
   }, 1000);
 }, 500);
 
-function showCongratulations() {
-  document.getElementById("final-score").textContent = currentScore;
-  document.getElementById("congratulations-modal").style.display = "flex";
-}
-
-function closeModal() {
-  // document.getElementById("congratulations-modal").style.display = "none";
-  window.location.href = "index.html";
-}
-
 let bgm = document.getElementById("bgm");
 setTimeout(() => {
   showCongratulations();
@@ -334,16 +324,36 @@ function updateHighScores(highScores, name) {
   return false;
 }
 
+let nameInput = document.getElementById("name-input");
+let highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 function submitHighScore() {
-  let highScores = JSON.parse(localStorage.getItem("highScores")) || [];
-  let playerName = document.getElementById("name").value;
+  let playerName = nameInput.value;
   if (playerName) {
     let resFindSameName = updateHighScores(highScores, playerName);
-    if (highScores.length < 5 && !resFindSameName) {
+    if (!resFindSameName) {
+      if (highScores.length >= 5) {
+        highScores.pop();
+      }
       createHighScore(highScores, playerName);
     }
     window.location.href = "highscore.html";
   }
+}
+
+let submitBtn = document.getElementById("submit-btn");
+nameInput.addEventListener("input", function () {
+  submitBtn.disabled = nameInput.value.trim() === "";
+});
+
+function showCongratulations() {
+  if (
+    highScores.length >= 5 &&
+    currentScore <= highScores[highScores.length - 1].score
+  ) {
+    submitBtn.style.display = "none";
+  }
+  document.getElementById("final-score").textContent = currentScore;
+  document.getElementById("congratulations-modal").style.display = "flex";
 }
 
 function goToHome() {

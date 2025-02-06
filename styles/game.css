@@ -71,7 +71,7 @@ body {
   color: #f9a35a;
 }
 
-.close-btn {
+.modal-btn {
   margin-top: 20px;
   padding: 10px 20px;
   border: none;
@@ -82,10 +82,18 @@ body {
   color: #005caa;
 }
 
-.close-btn:hover {
+.modal-btn:hover {
   background-color: #d9823a;
   border-color: #e5d176;
   color: darkred;
+}
+
+.modal-btn:disabled {
+  background-color: #d3d3d3;
+  border-color: #aaaaaa;
+  color: #666666;
+  cursor: not-allowed;
+  opacity: 0.6;
 }
 
 #home-button {

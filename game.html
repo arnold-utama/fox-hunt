@@ -28,7 +28,7 @@
         <div class="coolinput">
           <label for="input" class="text">Name:</label>
           <input
-            id="name"
+            id="name-input"
             type="text"
             placeholder="Write here..."
             name="input"
@@ -36,8 +36,15 @@
           />
         </div>
 
-        <button class="close-btn" onclick="location.reload();">Retry</button>
-        <button class="close-btn" onclick="submitHighScore()">Submit</button>
+        <button class="modal-btn" onclick="location.reload();">Retry</button>
+        <button
+          id="submit-btn"
+          class="modal-btn"
+          onclick="submitHighScore()"
+          disabled
+        >
+          Submit
+        </button>
       </div>
     </div>
 
