@@ -272,16 +272,25 @@ let spawnZalvin = setInterval(() => {
 }, zalvinSpawnInterval);
 
 let gun = document.getElementById("gun");
-let offsetX = 200;
+let gunPosition = 0;
+let offsetX = 180;
+let recoilAngle = 8;
 document.addEventListener("mousemove", (event) => {
   let mouseX = event.clientX;
-  let gunPosition = mouseX + offsetX;
-  gun.style.transform = `translateX(${gunPosition}px)`;
+  gunPosition = mouseX + offsetX;
+  gun.style.transform = `translateX(${gunPosition}px) rotate(0deg)`;
 });
 
 gameArea.addEventListener("mousedown", () => {
+  gun.src = "./assets/ak47_fire.png";
+  gun.style.transform = `translateX(${gunPosition}px) rotate(${recoilAngle}deg)`;
   let gunSound = new Audio("./assets/ak47_sound.webm");
   gunSound.play();
+});
+
+gameArea.addEventListener("mouseup", () => {
+  gun.src = "./assets/ak47.png";
+  gun.style.transform = `translateX(${gunPosition}px) rotate(0deg)`;
 });
 
 let timeLeft = totalTime;

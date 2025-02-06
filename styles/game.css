@@ -46,7 +46,8 @@ body {
 #gun {
   height: 250px;
   position: fixed;
-  bottom: -1px;
+  bottom: 0;
+  transition: transform 0.04s ease-in;
 }
 
 #congratulations-modal {
@@ -76,7 +77,6 @@ body {
 }
 
 .modal-btn {
-  /* margin-top: 20px; */
   margin: 15px 5px;
   padding: 10px 20px;
   border: none;
