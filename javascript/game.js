@@ -1,4 +1,4 @@
-let totalTime = 5; // set waktu per round di sini
+let totalTime = 20; // set waktu per round di sini
 let totalSwiper = Math.round(totalTime * 1.5); // jumlah Swiper yang muncul
 let totalBoots = Math.round(totalSwiper / 2); // jumlah Boots yang muncul
 let totalZalvin = Math.round(totalSwiper / 5); // jumlah Zalvin yang muncul
