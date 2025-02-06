@@ -107,7 +107,7 @@ function createBoots() {
     }
     target.dataset.clicked = "true";
     let currentPosition = window.getComputedStyle(target).transform;
-    target.src = "./assets/boots2.png";
+    target.src = "../assets/boots2.png";
     target.style.transform = currentPosition;
     target.style.transition = "opacity 1s ease-in";
     target.style.opacity = 0;
