@@ -312,8 +312,9 @@ setTimeout(() => {
 
 function updateHighScores(newScore) {
   let highScores = JSON.parse(localStorage.getItem("highScores")) || [];
-  highScores.push(newScore);
-  highScores.sort((a, b) => b - a);
+  let playerName = `Player${highScores.length + 1}`;
+  highScores.push({ name: playerName, score: newScore });
+  highScores.sort((a, b) => b.score - a.score);
   highScores = highScores.slice(0, 5); // Simpan hanya 5 skor tertinggi
   localStorage.setItem("highScores", JSON.stringify(highScores));
 }
