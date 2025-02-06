@@ -17,7 +17,7 @@ function createSwiper() {
   target.style.position = "absolute";
   target.style.top = Math.random() * gameAreaHeight + "px";
   target.style.height = "150px";
-  target.src = "./assets/swiper1.png";
+  target.src = "../assets/swiper1.png";
   target.alt = "Swiper";
   let transition = "transform 5s ease-in-out";
 
@@ -27,7 +27,7 @@ function createSwiper() {
   let spawnSide = "left";
   if (Math.random() > 0.5) {
     spawnSide = "right";
-    target.src = "./assets/swiper1_flipped.png";
+    target.src = "../assets/swiper1_flipped.png";
   }
   if (spawnSide === "left") {
     target.style.left = "-200px";
@@ -49,7 +49,7 @@ function createSwiper() {
     }
     target.dataset.clicked = "true";
     let currentPosition = window.getComputedStyle(target).transform;
-    target.src = "./assets/swiper2.png";
+    target.src = "../assets/swiper2.png";
     target.style.transform = currentPosition;
     target.style.transition = "opacity 1s ease-in";
     target.style.opacity = 0;
@@ -78,14 +78,14 @@ function createBoots() {
   target.style.position = "absolute";
   target.style.top = Math.random() * gameAreaHeight + "px";
   target.style.height = "150px";
-  target.src = "./assets/boots1.webp";
+  target.src = "../assets/boots1.webp";
   target.alt = "Boots";
   let transition = "transform 1.7s linear";
 
   let spawnSide = "left";
   if (Math.random() > 0.5) {
     spawnSide = "right";
-    target.src = "./assets/boots1_flipped.webp";
+    target.src = "../assets/boots1_flipped.webp";
   }
   if (spawnSide === "left") {
     target.style.left = "-200px";
@@ -138,14 +138,14 @@ function createZalvin() {
   target.style.height = "150px";
   target.style.height = "300px";
   target.style.top = (Math.random() * gameAreaHeight) / 2 + "px";
-  target.src = "./assets/zalvin1.png";
+  target.src = "../assets/zalvin1.png";
   target.alt = "Zalvin";
   let transition = "transform 2s ease-in-out";
 
   let spawnSide = "left";
   if (Math.random() > 0.5) {
     spawnSide = "right";
-    target.src = "./assets/zalvin1_flipped.png";
+    target.src = "../assets/zalvin1_flipped.png";
   }
   if (spawnSide === "left") {
     target.style.left = "-200px";
@@ -169,11 +169,11 @@ function createZalvin() {
     currentScore += zalvinPoints;
     score.textContent = currentScore;
     target.remove();
-    let zalvinSound = new Audio("./assets/zalvin.mp3");
+    let zalvinSound = new Audio("../assets/zalvin.mp3");
     zalvinSound.play();
 
     let jumpscare = document.createElement("img");
-    jumpscare.src = "./assets/zalvin2.png";
+    jumpscare.src = "../assets/zalvin2.png";
     jumpscare.style.height = "200%";
     jumpscare.style.position = "absolute";
     jumpscare.style.left = "50%";
@@ -282,14 +282,14 @@ document.addEventListener("mousemove", (event) => {
 });
 
 gameArea.addEventListener("mousedown", () => {
-  gun.src = "./assets/ak47_fire.png";
+  gun.src = "../assets/ak47_fire.png";
   gun.style.transform = `translateX(${gunPosition}px) rotate(${recoilAngle}deg)`;
-  let gunSound = new Audio("./assets/ak47_sound.webm");
+  let gunSound = new Audio("../assets/ak47_sound.webm");
   gunSound.play();
 });
 
 gameArea.addEventListener("mouseup", () => {
-  gun.src = "./assets/ak47.png";
+  gun.src = "../assets/ak47.png";
   gun.style.transform = `translateX(${gunPosition}px) rotate(0deg)`;
 });
 
