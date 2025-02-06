@@ -24,8 +24,20 @@
       <div class="modal-content">
         <h2>Congratulations!</h2>
         <p>Your score is <span class="value" id="final-score">0</span>!</p>
+
+        <div class="coolinput">
+          <label for="input" class="text">Name:</label>
+          <input
+            id="name"
+            type="text"
+            placeholder="Write here..."
+            name="input"
+            class="input"
+          />
+        </div>
+
         <button class="close-btn" onclick="location.reload();">Retry</button>
-        <button class="close-btn" onclick="closeModal()">Close</button>
+        <button class="close-btn" onclick="submitHighScore()">Submit</button>
       </div>
     </div>
 

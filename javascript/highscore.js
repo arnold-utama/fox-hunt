@@ -5,9 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // Urutkan skor dari tertinggi ke terendah
   highScores.sort((a, b) => b.score - a.score);
 
-  // Ambil hanya 5 skor tertinggi
-  highScores = highScores.slice(0, 5);
-
   // Tambahkan skor ke dalam daftar
   highScores.forEach((entry, index) => {
     const li = document.createElement("li");
