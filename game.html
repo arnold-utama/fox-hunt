@@ -2,23 +2,34 @@
 <html lang="en">
   <head>
     <title>Fox Hunt</title>
-    <link rel="stylesheet" href="styles/game.css" />
+    <link rel="stylesheet" href="./styles/game.css" />
   </head>
   <body>
+    <button id="home-button" onclick="goToHome()">Kembali ke Home</button>
+
     <div id="header">
       <h1>Time: <span class="value" id="timer">0</span></h1>
       <h1>Score: <span class="value" id="score">0</span></h1>
     </div>
     <div id="game-area"></div>
+    <div id="gun-area">
+      <img id="gun" src="./assets/ak47.png" alt="ak47" />
+    </div>
+
+    <!-- <button onclick="window.location.href='highscore.html'">
+      View High Scores
+    </button> -->
 
     <div id="congratulations-modal">
       <div class="modal-content">
         <h2>Congratulations!</h2>
         <p>Your score is <span class="value" id="final-score">0</span>!</p>
+        <button class="close-btn" onclick="location.reload();">Retry</button>
         <button class="close-btn" onclick="closeModal()">Close</button>
       </div>
     </div>
-    
-    <script src="script.js"></script>
+
+    <audio id="bgm" src="./assets/swiper_theme.webm" autoplay></audio>
+    <script src="./javascript/game.js"></script>
   </body>
 </html>

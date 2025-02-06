@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fox-Hunter</title>
-  <link rel="stylesheet" href="highscore.css">
-</head>
-<body>
-  <div class="highscore-container">
-    <h1>Highscores</h1>
-    <div id="highscores-list"></div>
-    <input type="number" id="score-input" placeholder="Masukkan skor baru">
-    <button id="add-score-button">Tambahkan Skor</button>
-  </div>
-  <script src="highscore.js"></script>
-</body>
-</html> 
+  <head>
+    <meta charset="UTF-8" />
+    <title>Fox Hunt - High Scores</title>
+    <link rel="stylesheet" href="./styles/highscore.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Top 5 High Scores</h1>
+      <ol id="highscore-list"></ol>
+      <button onclick="goBack()">Back to Home</button>
+    </div>
+
+    <script src="./javascript/highscore.js"></script>
+  </body>
+</html>

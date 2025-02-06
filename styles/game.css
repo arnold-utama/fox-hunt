@@ -9,13 +9,14 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  background-image: url("/assets/game_background.png");
+  background-image: url("../assets/game_background.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-color: black;
 }
 #header {
+  height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -29,11 +30,23 @@ body {
 }
 
 #game-area {
-  cursor: url("/assets/cursor_aim-64x64px.png") 32 32, auto;
+  cursor: url("../assets/aim_red-64x64px.png") 32 32, auto;
+  user-select: none;
   flex-grow: 1;
   position: relative;
   width: 100%;
+}
+
+#gun-area {
   user-select: none;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#gun {
+  height: 250px;
+  position: fixed;
+  bottom: -1px;
 }
 
 #congratulations-modal {
@@ -72,5 +85,25 @@ body {
 .close-btn:hover {
   background-color: #d9823a;
   border-color: #e5d176;
+  color: darkred;
+}
+
+#home-button {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: #ffea8b;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #005caa;
+  z-index: 1000; /* Agar selalu terlihat di atas elemen lain */
+}
+
+#home-button:hover {
+  background-color: #e5d176;
   color: darkred;
 }

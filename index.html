@@ -2,17 +2,37 @@
 <html lang="en">
   <head>
     <title>Fox Hunt</title>
-    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="./styles/home.css" />
   </head>
   <body>
-    <button id="startButton" type="button">START</button>
+    <div class="button-border">
+      <div class="button-base">
+        <button class="button" id="startButton" type="button">START</button>
+      </div>
+    </div>
+    <div class="button-border">
+      <div class="button-base">
+        <button class="button" onclick="viewHighScores()">SCORES</button>
+      </div>
+    </div>
 
+    <audio id="home_bgm" src="./assets/dora_theme.webm" autoplay loop></audio>
     <script>
       document
         .getElementById("startButton")
         .addEventListener("click", function () {
           window.location.href = "game.html";
         });
+    </script>
+
+    <script>
+      function startGame() {
+        window.location.href = "game.html";
+      }
+
+      function viewHighScores() {
+        window.location.href = "highscore.html";
+      }
     </script>
   </body>
 </html>
