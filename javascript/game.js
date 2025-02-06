@@ -56,6 +56,8 @@ function createSwiper() {
     currentScore += swiperPoints;
     score.textContent = currentScore;
 
+    showPoints(target, swiperPoints);
+    
     setTimeout(() => {
       target.remove();
     }, 1000);
@@ -111,6 +113,8 @@ function createBoots() {
     target.style.opacity = 0;
     currentScore += bootsPoints;
     score.textContent = currentScore;
+
+    showPoints(target, bootsPoints);
 
     setTimeout(() => {
       target.remove();
@@ -177,6 +181,8 @@ function createZalvin() {
     jumpscare.style.transform = "translate(-50%, -50%)";
     gameArea.appendChild(jumpscare);
 
+    showPoints(jumpscare, zalvinPoints);
+
     setTimeout(() => {
       jumpscare.remove();
     }, 1000);
@@ -194,6 +200,44 @@ function createZalvin() {
     event.preventDefault();
   });
   gameArea.appendChild(target);
+}
+
+function showPoints(target, value) {
+      let rect = target.getBoundingClientRect();
+      let swiperX = rect.left + rect.width / 2;
+      let swiperY = rect.top - 50;
+  
+      let points = document.createElement("span");
+      points.textContent = "+" + value;
+      points.style.color = "#ffee83";
+      if (value < 0) {
+        points.textContent = value;
+        points.style.color = "#ed4c63";
+      }
+      points.style.fontSize = "1.5em";
+      points.style.fontWeight = "bold";
+      points.style.textShadow = "1px 1px 1px black, -1px -1px 1px black, 1px -1px 1px black, -1px 1px 1px black";
+      points.style.position = "absolute";
+      points.style.left = `${swiperX}px`;
+      points.style.top = `${swiperY}px`;
+      points.style.pointerEvents = "none";
+      points.style.transition = "opacity 0.8s ease-in, transform 0.8s ease-out";
+      points.style.transform = "translate(-50%, -50%)";
+      if (value === zalvinPoints) {
+        points.style.fontSize = "3em";
+        points.style.transform = "translate(-100%, 0%)";
+      }
+      
+      gameArea.appendChild(points);
+  
+      setTimeout(() => {
+        points.style.opacity = "0";
+        points.style.transform += " translateY(-65px)";
+      }, 10);
+      
+      setTimeout(() => {
+        points.remove();
+      }, 800);
 }
 
 let swiperSpawned = 0;
