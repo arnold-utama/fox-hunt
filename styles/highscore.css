@@ -35,6 +35,10 @@ h1 {
   font-weight: bold;
 }
 
+.value {
+  color: #ffea8b;
+}
+
 button {
   margin-top: 20px;
   padding: 10px 20px;

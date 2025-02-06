@@ -71,7 +71,7 @@ body {
   color: #f9a35a;
 }
 
-.close-btn {
+.modal-btn {
   margin-top: 20px;
   padding: 10px 20px;
   border: none;
@@ -82,10 +82,18 @@ body {
   color: #005caa;
 }
 
-.close-btn:hover {
+.modal-btn:hover {
   background-color: #d9823a;
   border-color: #e5d176;
   color: darkred;
+}
+
+.modal-btn:disabled {
+  background-color: #d3d3d3;
+  border-color: #aaaaaa;
+  color: #666666;
+  cursor: not-allowed;
+  opacity: 0.6;
 }
 
 #home-button {
@@ -106,4 +114,37 @@ body {
 #home-button:hover {
   background-color: #e5d176;
   color: darkred;
+}
+
+/* From Uiverse.io by kamehame-ha */
+.coolinput {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  position: static;
+  max-width: 240px;
+}
+
+.coolinput label.text {
+  font-size: 0.75rem;
+  color: #818cf8;
+  font-weight: 700;
+  position: relative;
+  top: 0.5rem;
+  margin: 0 0 0 7px;
+  padding: 0 3px;
+  background: #e8e8e8;
+  width: fit-content;
+}
+
+.coolinput input[type="text"].input {
+  padding: 11px 10px;
+  font-size: 0.75rem;
+  border: 2px #818cf8 solid;
+  border-radius: 5px;
+  background: #e8e8e8;
+}
+
+.coolinput input[type="text"].input:focus {
+  outline: none;
 }
