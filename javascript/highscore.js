@@ -4,7 +4,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   highScores.forEach((entry, index) => {
     const li = document.createElement("li");
-    li.textContent = `${index + 1}. ${entry.name} — ${entry.score}`;
+    li.textContent = `${entry.name} — ${entry.score}`;
+    li.style.animation = `fadeIn 0.5s ease-in-out ${index * 0.2}s forwards`;
+    li.style.opacity = "0"; // Awalnya disembunyikan sebelum animasi
     highscoreList.appendChild(li);
   });
 });
